@@ -17,11 +17,12 @@ for n = 1:50
     for c = 2: column-1
         for r  = 2: row-1
             V(r,c) = (V(r-1,c)+V(r+1,c)+V(r,c+1)+V(r,c-1))/4
-            V(1,:) = V(2,:)
-            V(row,:) = V(row-1,:)
+            %V(1,:) = V(2,:)
+            %V(row,:) = V(row-1,:)
         end
     end
 end
+figure (3)
 haha = imboxfilt(V,3);
 imshowpair(V,haha);
 end
